@@ -39,7 +39,8 @@
     "standard-version": "standard-version",
     "precommit": "lint-staged",
     "generate-barrels": "barrelsby --delete -e /node_modules/.* -e rollup\\.config -e /tools/ -e /test/ -q -n simulator.ts -d src",
-    "generate-test-cases": "tsc tools/test-cases-creator.ts && node tools/test-cases-creator.js"
+    "generate-test-cases": "tsc tools/test-cases-creator.ts && node tools/test-cases-creator.js",
+    "prepare": "npm run prebuild && npm run build"
   },
   "lint-staged": {
     "{src,test}/**/*.ts": [
